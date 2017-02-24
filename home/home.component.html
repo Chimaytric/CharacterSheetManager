@@ -1,0 +1,102 @@
+<div class = "page-header">
+    <h1>Game sessions</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><input type="text" class="form-control input-sm" placeholder="Session name"></h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                           <b>Game : </b>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-control input-sm">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-5">
+                           <b>Game master : </b>
+                        </div>
+                        <div class="col-md-7">
+                            <select class="form-control input-sm">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Players : </b>
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="input-group input-group-sm">
+                                        <select class="form-control">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">
+                                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href ><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> Bilbon Sacquet
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="panel-body">
+                <button type="button" class="btn btn-primary pull-right">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" ng-repeat="gameSession in homeCtrl.gameSessions">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><b>{{gameSession.name}}</b></h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><b>Game : </b>{{gameSession.game.title}}</li>
+                <li class="list-group-item"><b>Game master : </b>{{gameSession.gameMaster.firstName}} {{gameSession.gameMaster.lastName}}</li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <b>Players : </b>
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="list-group">
+                                <li class="list-group-item" ng-repeat="player in gameSession.players">{{player.firstName}} {{player.lastName}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="panel-body">
+                <img ng-src="{{gameSession.game.image}}" alt="{{gameSession.game.image}}" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>

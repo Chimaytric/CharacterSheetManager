@@ -1,0 +1,53 @@
+{
+    "games": [
+    { 
+        "id": 1,
+        "title": "Donjons et Dragons",
+        "image": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png"
+    },
+    {
+        "id": 2,
+        "title": "L'appel de Cthulhu",
+        "image": "https://measurelesseons.files.wordpress.com/2013/05/call_of_cthulhu_2.jpg"
+    }
+    ],
+    "gameSessions": [
+    {
+        "id": 1,
+        "name": "La porte de Baldur",
+        "game": 1,
+        "gameMaster": 1,
+        "players": [2, 3]
+    },
+    {
+        "id": 2,
+        "name": "The dark mansion",
+        "game": 2,
+        "gameMaster": 3,
+        "players": [1, 2]
+    }
+    ],
+    "players": [
+        {
+            "id": 1,
+            "lastName": "Sacquet",
+            "firstName": "Bilbon"
+        },
+        {
+            "id": 2,
+            "lastName": "Bombadil",
+            "firstName": "Tom"
+        },
+        {
+            "id": 3,
+            "lastName": "Dullac",
+            "firstName": "Dame"
+        }
+    ],
+    "templates": [
+        {
+            "id": 1,
+            "game": 1
+        }
+    ]
+}
