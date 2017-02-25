@@ -1,5 +1,56 @@
-<div class="jumbotron">
-    <h1>Page 1</h1>
-    <p>This is a starter app using Angular 1.5, ui-router and Bootstrap</p>
-    <p><a class="btn btn-lg btn-primary" ui-sref="home" role="button">Back to home</a></p>
+<div class = "page-header">
+    <h1>Games</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><input type="text" ng-model="gamesCtrl.newGame.title" class="form-control input-sm" placeholder="Session name"></h3>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img ng-if="gamesCtrl.newGame.image && gamesCtrl.newGame.image !== ''" ng-src="{{gamesCtrl.newGame.image}}" alt="{{gamesCtrl.newGame.image}}" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="image">Image url : </label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="url" ng-model="gamesCtrl.newGame.image" placeholder="http://" class="form-control input-sm" id="image">
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <b>Template : </b>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control input-sm" ng-model="gamesCtrl.newGame.template" ng-options="template.name for template in gamesCtrl.templates"></select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="panel-body">
+                <button type="button" ng-click="gamesCtrl.createGame()" class="btn btn-primary pull-right">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" ng-repeat="game in gamesCtrl.games">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <button type="button" class="btn btn-default btn-sm pull-right" ng-click="gamesCtrl.deleteGame(game.id)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                <h3 class="panel-title">
+                    {{game.title}}
+                </h3>
+            </div>
+            <div class="panel-body">
+                <img ng-src="{{game.image}}" alt="{{game.image}}" class="img-responsive">
+                <b>Template : </b>{{game.template.name}}
+            </div>
+        </div>
+    </div>
 </div>

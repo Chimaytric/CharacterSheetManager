@@ -1,5 +1,46 @@
-<div class="jumbotron">
-    <h1>Page 2</h1>
-    <p>This is a starter app using Angular 1.5, ui-router and Bootstrap</p>
-    <p><a class="btn btn-lg btn-primary" ui-sref="home" role="button">Back to home</a></p>
+<div class = "page-header">
+    <h1>Players</h1>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="fName">First name : </label>
+                <input type="text" ng-model="playersCtrl.newPlayer.firstName" placeholder="John" class="form-control" id="fName">
+            </div>
+            <div class="form-group">
+                <label for="lName">Last name : </label>
+                <input type="text" ng-model="playersCtrl.newPlayer.lastName" placeholder="Doe" class="form-control" id="lName">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender : </label>
+                <select class="form-control" ng-model="playersCtrl.newPlayer.gender">
+                    <option value=0 selected="selected" >Male</option>
+                    <option value=1>Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description : </label>
+            <textarea class="form-control" ng-model="playersCtrl.newPlayer.description" rows="3" id="description"></textarea>
+        </div>
+        <button type="submit" ng-click="playersCtrl.createPlayer()" class="btn btn-primary">Save</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6" ng-repeat="player in playersCtrl.players">
+        <div class="media">
+            <div class="media-left">
+                <img ng-src="{{player.image}}" alt="{{player.image}}" class="media-object" style="width:60px">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    {{player.firstName}} {{player.lastName}}
+                    <button type="button" class="btn btn-default btn-sm pull-right" ng-click="playersCtrl.deletePlayer(player.id)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                </h4>
+                <p>{{player.description}}</p>
+            </div>
+        </div>
+        <br>
+    </div>
 </div>
