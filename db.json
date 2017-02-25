@@ -1,53 +1,71 @@
 {
-    "games": [
-    { 
-        "id": 1,
-        "title": "Donjons et Dragons",
-        "image": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png"
+  "games": [
+    {
+      "id": 1,
+      "title": "Donjons et Dragons",
+      "image": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png",
+      "template": 1
     },
     {
-        "id": 2,
-        "title": "L'appel de Cthulhu",
-        "image": "https://measurelesseons.files.wordpress.com/2013/05/call_of_cthulhu_2.jpg"
+      "id": 2,
+      "title": "L'appel de Cthulhu",
+      "image": "http://www.sans-detour.com/wp-content/uploads/2013/03/tet_adc.jpg",
+      "template": 2
     }
-    ],
-    "gameSessions": [
+  ],
+  "gameSessions": [
     {
-        "id": 1,
-        "name": "La porte de Baldur",
-        "game": 1,
-        "gameMaster": 1,
-        "players": [2, 3]
+      "id": 1,
+      "name": "La porte de Baldur",
+      "game": 1,
+      "gameMaster": 1,
+      "players": [
+        2,
+        3
+      ]
     },
     {
-        "id": 2,
-        "name": "The dark mansion",
-        "game": 2,
-        "gameMaster": 3,
-        "players": [1, 2]
+      "id": 2,
+      "name": "The dark mansion",
+      "game": 2,
+      "gameMaster": 3,
+      "players": [
+        1,
+        2
+      ]
     }
-    ],
-    "players": [
-        {
-            "id": 1,
-            "lastName": "Sacquet",
-            "firstName": "Bilbon"
-        },
-        {
-            "id": 2,
-            "lastName": "Bombadil",
-            "firstName": "Tom"
-        },
-        {
-            "id": 3,
-            "lastName": "Dullac",
-            "firstName": "Dame"
-        }
-    ],
-    "templates": [
-        {
-            "id": 1,
-            "game": 1
-        }
-    ]
+  ],
+  "players": [
+    {
+      "id": 1,
+      "lastName": "Sacquet",
+      "firstName": "Bilbon",
+      "gender": 0,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta."
+    },
+    {
+      "id": 2,
+      "lastName": "Bombadil",
+      "firstName": "Tom",
+      "gender": 0,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta."
+    },
+    {
+      "id": 3,
+      "lastName": "Dullac",
+      "firstName": "Dame",
+      "gender": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta."
+    }
+  ],
+  "templates": [
+    {
+      "id": 1,
+      "name": "D&D Character Sheet"
+    },
+    {
+      "id": 2,
+      "name": "Call of Cthullhu character sheet"
+    }
+  ]
 }
