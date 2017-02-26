@@ -27,7 +27,128 @@
       "characters": [
         {
           "id": 1,
-          "player": 2
+          "player": 2,
+          "characterName": "Gurdil",
+          "characterSheet": [
+            {
+              "width": 12,
+              "type": "header",
+              "elements": [
+                {
+                  "type": "image",
+                  "url": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png"
+                },
+                {
+                  "type": "text",
+                  "displayName": "Player Name",
+                  "name": "playerName",
+                  "value": "Tom Bombadil"
+                }
+              ]
+            },
+            {
+              "width": 12,
+              "type": "body",
+              "elements": [
+                {
+                  "type": "text",
+                  "displayName": "Character Name",
+                  "name": "characterName",
+                  "value": "Gurdil"
+                },
+                {
+                  "type": "number",
+                  "displayName": "Level",
+                  "name": "level",
+                  "value": 1
+                },
+                {
+                  "type": "text",
+                  "displayName": "Class",
+                  "name": "class",
+                  "value": "Warrior"
+                },
+                {
+                  "type": "text",
+                  "displayName": "Parangon Path",
+                  "name": "parangonPath",
+                  "value": null
+                },
+                {
+                  "type": "text",
+                  "displayName": "Epic Destiny",
+                  "name": "epicDestiny",
+                  "value": null
+                },
+                {
+                  "type": "number",
+                  "displayName": "Total XP",
+                  "name": "totalXP",
+                  "value": 0
+                },
+                {
+                  "type": "text",
+                  "displayName": "Race",
+                  "name": "race",
+                  "value": "Dwarf"
+                },
+                {
+                  "type": "number",
+                  "displayName": "Size",
+                  "name": "size",
+                  "value": null
+                },
+                {
+                  "type": "number",
+                  "displayName": "Age",
+                  "name": "age",
+                  "value": null
+                },
+                {
+                  "type": "number",
+                  "displayName": "Gender",
+                  "name": "gender",
+                  "value": null
+                },
+                {
+                  "type": "number",
+                  "displayName": "Height",
+                  "name": "height",
+                  "value": null
+                },
+                {
+                  "type": "number",
+                  "displayName": "Weight",
+                  "name": "weight",
+                  "value": null
+                },
+                {
+                  "type": "text",
+                  "displayName": "Alignment",
+                  "name": "alignment",
+                  "value": null
+                },
+                {
+                  "type": "text",
+                  "displayName": "Deity",
+                  "name": "deity",
+                  "value": null
+                },
+                {
+                  "type": "text",
+                  "displayName": "Adventuring company or other Affiliation",
+                  "name": "adventuringCompanyOrOtherAffiliation",
+                  "value": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "player": 3,
+          "characterName": "Norlenilia de Nilnerolinor",
+          "characterSheet": []
         }
       ]
     },
@@ -68,7 +189,121 @@
   "templates": [
     {
       "id": 1,
-      "name": "D&D Character Sheet"
+      "name": "D&D 4 Character Sheet",
+      "squeletton": [
+        {
+          "width": 12,
+          "type": "header",
+          "elements": [
+            {
+              "type": "image",
+              "url": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png"
+            },
+            {
+              "type": "text",
+              "displayName": "Player Name",
+              "name": "playerName",
+              "value": null
+            }
+          ]
+        },
+        {
+          "width": 12,
+          "type": "body",
+          "elements": [
+            {
+              "type": "text",
+              "displayName": "Character Name",
+              "name": "characterName",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Level",
+              "name": "level",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Class",
+              "name": "class",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Parangon Path",
+              "name": "parangonPath",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Epic Destiny",
+              "name": "epicDestiny",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Total XP",
+              "name": "totalXP",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Race",
+              "name": "race",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Size",
+              "name": "size",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Age",
+              "name": "age",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Gender",
+              "name": "gender",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Height",
+              "name": "height",
+              "value": null
+            },
+            {
+              "type": "number",
+              "displayName": "Weight",
+              "name": "weight",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Alignment",
+              "name": "alignment",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Deity",
+              "name": "deity",
+              "value": null
+            },
+            {
+              "type": "text",
+              "displayName": "Adventuring company or other Affiliation",
+              "name": "adventuringCompanyOrOtherAffiliation",
+              "value": null
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 2,

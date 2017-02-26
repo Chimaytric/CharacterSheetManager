@@ -7,7 +7,8 @@ angular.module('characterSheetmanager', [
     'characterSheetmanager.homeComponent',
     'characterSheetmanager.gamesComponent',
     'characterSheetmanager.playersComponent',
-    'characterSheetmanager.gameSessionDetailComponent'
+    'characterSheetmanager.gameSessionDetailComponent',
+    'characterSheetmanager.characterSheetComponent'
 ])
 
 .config(function($stateProvider, $urlRouterProvider){
@@ -39,10 +40,20 @@ angular.module('characterSheetmanager', [
         component: 'gameSessionDetailComponent'
     }
 
+    var characterSheetState = {
+        name: 'characterSheet',
+        url: '/characterSheet',
+        params: {
+            characterSheet: null
+        },
+        component: 'characterSheetComponent'
+    }
+
     $stateProvider.state(homeState);
     $stateProvider.state(gamesState);
     $stateProvider.state(playersState);
     $stateProvider.state(gameSessionDetailState);
+    $stateProvider.state(characterSheetState);
 
     $urlRouterProvider.when('', '/');
 

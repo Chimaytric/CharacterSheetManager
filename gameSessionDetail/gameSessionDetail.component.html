@@ -22,13 +22,13 @@
             <table class="table table-striped table-responsive table-primary">
                 <thead><tr><th>Player</th><th>Character</th><th></th><th></th><th></th><th>Action</th></tr></thead>
                 <tbody>
-                    <tr ng-repeat="player in gameSessionDetailCtrl.gameSession.players">
-                        <td>{{player.firstName}} {{player.lastName}}</td>
-                        <td>Pitt</td>
+                    <tr ng-repeat="character in gameSessionDetailCtrl.gameSession.characters">
+                        <td>{{character.player.firstName}} {{character.player.lastName}}</td>
+                        <td>{{character.characterName}}</td>
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td>USA</td>
+                        <td><a href ui-sref="characterSheet({characterSheet: character.characterSheet})" >Fiche</a></td>
                     </tr>
                 </tbody>
             </table>

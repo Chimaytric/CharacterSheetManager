@@ -12,11 +12,11 @@ function gameSessionDetailController($state, $stateParams, gameSessionDetailFact
             gameSessionDetailFactory.getPlayerById(vm.gameSession.gameMaster).then(function(gameMaster){
                 vm.gameSession.gameMaster = gameMaster;
             });
-            vm.gameSession.players.forEach(function(playerId, index){
-                gameSessionDetailFactory.getPlayerById(playerId).then(function(player){
-                    vm.gameSession.players[index] = player;
+            vm.gameSession.characters.forEach(function(character, index){
+                gameSessionDetailFactory.getPlayerById(character.player).then(function(player){
+                    vm.gameSession.characters[index].player = player;
                 });
-            })
+            });
         });
     } else
         $state.go('home');
