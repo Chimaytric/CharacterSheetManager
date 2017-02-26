@@ -1,0 +1,49 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-7">
+            <h3>{{gameSessionDetailCtrl.gameSession.name}}</h3> 
+            <p>An adventure of <b>{{gameSessionDetailCtrl.gameSession.game.title}}</b></p>
+            <small>{{gameSessionDetailCtrl.gameSession.description}}</small>
+        </div>
+        <div class="col-md-5">
+            <img ng-src="{{gameSessionDetailCtrl.gameSession.game.image}}" alt="{{gameSessionDetailCtrl.gameSession.game.image}}" class="img-responsive">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Players and Characters</h3>
+            </div>
+            <div class="panel-body">
+                <b>Game Master : </b>{{gameSessionDetailCtrl.gameSession.gameMaster.firstName}} {{gameSessionDetailCtrl.gameSession.gameMaster.lastName}}
+            </div>
+            <table class="table table-striped table-responsive table-primary">
+                <thead><tr><th>Player</th><th>Character</th><th></th><th></th><th></th><th>Action</th></tr></thead>
+                <tbody>
+                    <tr ng-repeat="player in gameSessionDetailCtrl.gameSession.players">
+                        <td>{{player.firstName}} {{player.lastName}}</td>
+                        <td>Pitt</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>USA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Tools</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                <script type="text/javascript" id="WolframAlphaScripte7eb85fad454ec6f460af84e5eda3049" src="//www.wolframalpha.com/widget/widget.jsp?id=e7eb85fad454ec6f460af84e5eda3049"></script>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

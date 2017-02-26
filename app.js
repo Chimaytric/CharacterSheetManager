@@ -6,7 +6,8 @@ angular.module('characterSheetmanager', [
     'characterSheetmanager.headerComponent',
     'characterSheetmanager.homeComponent',
     'characterSheetmanager.gamesComponent',
-    'characterSheetmanager.playersComponent'
+    'characterSheetmanager.playersComponent',
+    'characterSheetmanager.gameSessionDetailComponent'
 ])
 
 .config(function($stateProvider, $urlRouterProvider){
@@ -29,9 +30,19 @@ angular.module('characterSheetmanager', [
         component: 'playersComponent'
     };
 
+    var gameSessionDetailState = {
+        name: 'gameSessionDetail',
+        url: '/gameSession',
+        params: {
+            gameSessionId: null
+        },
+        component: 'gameSessionDetailComponent'
+    }
+
     $stateProvider.state(homeState);
     $stateProvider.state(gamesState);
     $stateProvider.state(playersState);
+    $stateProvider.state(gameSessionDetailState);
 
     $urlRouterProvider.when('', '/');
 

@@ -18,10 +18,17 @@
       "id": 1,
       "name": "La porte de Baldur",
       "game": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta.",
       "gameMaster": 1,
       "players": [
         2,
         3
+      ],
+      "characters": [
+        {
+          "id": 1,
+          "player": 2
+        }
       ]
     },
     {

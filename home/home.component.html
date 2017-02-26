@@ -5,7 +5,7 @@
     <div class="col-md-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><input type="text" class="form-control input-sm" placeholder="Session name"></h3>
+                <h3 class="panel-title"><input type="text" ng-model="homeCtrl.newSession.name" class="form-control input-sm" placeholder="Session name"></h3>
             </div>
             <ul class="list-group">
                 <li class="list-group-item">
@@ -14,12 +14,7 @@
                            <b>Game : </b>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-control input-sm">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
+                            <select class="form-control input-sm" ng-model="homeCtrl.newSession.game" ng-options="game.title for game in homeCtrl.games"></select>
                         </div>
                     </div>
                 </li>
@@ -29,12 +24,7 @@
                            <b>Game master : </b>
                         </div>
                         <div class="col-md-7">
-                            <select class="form-control input-sm">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
+                            <select class="form-control input-sm" ng-model="homeCtrl.newSession.gameMaster" ng-options="(player.firstName+' '+player.lastName) for player in homeCtrl.players"></select>
                         </div>
                     </div>
                 </li>
@@ -47,21 +37,16 @@
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <div class="input-group input-group-sm">
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+                                        <select class="form-control input-sm" ng-model="homeCtrl.newPlayer" ng-options="(player.firstName+' '+player.lastName) for player in homeCtrl.players"></select>
                                         <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">
+                                            <button class="btn btn-default" type="button" ng-click="homeCtrl.addPlayer()">
                                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                             </button>
                                         </span>
                                     </div>
                                 </li>
-                                <li class="list-group-item">
-                                    <a href ><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> Bilbon Sacquet
+                                <li class="list-group-item" ng-repeat="player in homeCtrl.newSession.players track by $index">
+                                    <a href><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a> {{player.firstName}} {{player.lastName}}
                                 </li>
                             </ul>
                         </div>
@@ -69,14 +54,18 @@
                 </li>
             </ul>
             <div class="panel-body">
-                <button type="button" class="btn btn-primary pull-right">Save</button>
+                <button type="button" class="btn btn-primary pull-right" ng-click="homeCtrl.addGameSession()">Save</button>
             </div>
         </div>
     </div>
     <div class="col-md-4" ng-repeat="gameSession in homeCtrl.gameSessions">
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title"><b>{{gameSession.name}}</b></h3>
+            <div class="panel-heading clearfix">
+                <div class="btn-group btn-group-sm pull-right">
+                    <a href ui-sref="gameSessionDetail({gameSessionId: gameSession.id})" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                    <button type="button" class="btn btn-default" ng-click="homeCtrl.deleteGameSession(gameSession.id)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                </div>
+                <h3 class="panel-title"><a href ui-sref="gameSessionDetail({gameSessionId: gameSession.id})"><b>{{gameSession.name}}</b></a></h3>
             </div>
             <ul class="list-group">
                 <li class="list-group-item"><b>Game : </b>{{gameSession.game.title}}</li>
