@@ -28,7 +28,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td><a href ui-sref="characterSheet({characterSheet: character.characterSheet})" >Fiche</a></td>
+                        <td><a href ui-sref="characterSheet({template: gameSessionDetailCtrl.gameSession.game.template, characterData: character.characterSheet, gameSessionId: gameSessionDetailCtrl.gameSession.id, characterId: character.player.id})" >Fiche</a></td>
                     </tr>
                 </tbody>
             </table>

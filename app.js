@@ -44,7 +44,10 @@ angular.module('characterSheetmanager', [
         name: 'characterSheet',
         url: '/characterSheet',
         params: {
-            characterSheet: null
+            template: null,
+            characterData: null,
+            gameSessionId: null,
+            characterId: null
         },
         component: 'characterSheetComponent'
     }

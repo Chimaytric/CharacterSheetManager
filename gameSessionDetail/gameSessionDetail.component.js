@@ -7,7 +7,7 @@ function gameSessionDetailController($state, $stateParams, gameSessionDetailFact
         gameSessionDetailFactory.getGameSessionById($stateParams.gameSessionId).then(function(gameSession){
             vm.gameSession = gameSession;
             gameSessionDetailFactory.getGameById(vm.gameSession.game).then(function(game){
-                vm.gameSession.game = game;
+                vm.gameSession.game = game; 
             });
             gameSessionDetailFactory.getPlayerById(vm.gameSession.gameMaster).then(function(gameMaster){
                 vm.gameSession.gameMaster = gameMaster;

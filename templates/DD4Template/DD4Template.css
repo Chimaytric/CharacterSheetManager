@@ -1,0 +1,55 @@
+#DD4Template{ border: thin solid rgba(0, 0, 0, 0.4);
+    border-top: none;
+}
+
+#DD4Template .header img{ display: block;
+    width: 100%;
+    height: auto;
+}
+
+#DD4Template .heading ul{ list-style-type: none;
+    text-align: justify;
+    padding: 10px 5px;
+}
+#DD4Template .heading ul li{ display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+    text-align: left;
+}
+#DD4Template .heading ul li input.baseline{ border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#DD4Template .heading ul li input.squared{ border: 1px solid rgba(0, 0, 0, 0.3); }
+#DD4Template .heading ul li label{ font-size: 0.8em; }
+
+#DD4Template .section ul{ list-style-type: none;
+    text-align: center;
+}
+#DD4Template .section ul li{ display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 5px;
+}
+#DD4Template .section ul li h2{ display: block;
+    margin: 0;
+    padding: 2px 70px;
+    background-color: black;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+}
+#DD4Template .section ul li .group{ text-align: left;
+    padding: 0 5px; 
+}
+#DD4Template .section ul li .group ul{ padding: 4px 20px;
+    margin: 15px 0;
+    background-color: black;
+}
+#DD4Template .section ul li .group ul li{ width: auto;
+    vertical-align: baseline;
+}
+#DD4Template .section ul li .group ul li label{ color: white;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+#DD4Template .section ul li .group ul li input{ height: 20px;}

@@ -1,0 +1,560 @@
+<link href="templates/DD4Template/DD4Template.css" type="text/css" rel="stylesheet" />
+
+<div id="DD4Template">
+    <div class="header">
+        <img src="templates/DD4Template/images/header.png">
+    </div>
+    <div class="heading">
+        <ul>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.characterName" id="characterName" class="baseline" style="width: 250px;"><br>
+                <label for="characterName">Character Name</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.level" id="level" class="squared" style="width: 70px;"><br>
+                <label for="level">Level</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.class" id="class" class="baseline"><br>
+                <label for="class">Class</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.parangonPath" id="parangonPath" class="baseline"><br>
+                <label for="parangonPath">Parangon Path</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.epicDestiny" id="epicDestiny" class="baseline"><br>
+                <label for="epicDestiny">Epic Destiny</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.totalXP" id="totalXP" class="squared" style="width: 70px;"><br>
+                <label for="totalXP">Total XP</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.race" id="race" class="baseline" style="width: 150px;"><br>
+                <label for="race">Race</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.size" id="size" class="baseline" style="width: 70px;"><br>
+                <label for="size">Size</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.age" id="age" class="baseline" style="width: 70px;"><br>
+                <label for="age">Age</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.gender" id="gender" class="baseline" style="width: 70px;"><br>
+                <label for="gender">Gender</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.height" id="height" class="baseline" style="width: 70px;"><br>
+                <label for="height">Height</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.weight" id="weight" class="baseline" style="width: 70px;"><br>
+                <label for="weight">Weight</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.alignment" id="alignment" class="baseline" style="width: 100px;"><br>
+                <label for="alignment">Alignment</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.deity" id="deity" class="baseline" style="width: 100px;"><br>
+                <label for="deity">Deity</label>
+            </li>
+            <li>
+                <input type="text" ng-model="characterSheetCtrl.characterData.adventuringCompanyOrOtherAffiliation" id="adventuringCompanyOrOtherAffiliation" class="baseline" style="width: 250px;"><br>
+                <label for="adventuringCompanyOrOtherAffiliation">Adventuring Company or Other Affiliation</label>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <ul>
+            <li>
+                <div class="element">
+                    <h2>INITIATIVE</h2>
+                    <div class="group">
+                        <ul>
+                            <li>
+                                <label for="initiativeScore">SCORE</label>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativeScore" id="initiativeScore" class="square" style="width: 40px;">
+                            </li>
+                            <li>
+                                <label for="initiativeDexMod">DEX</label>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativeDexMod" id="initiativeDexMod" class="square" style="width: 40px;">
+                            </li>
+                            <li>
+                                <label for="initiativehalfLevelMod">1/2 LEVEL</label>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativehalfLevelMod" id="initiativehalfLevelMod" class="square" style="width: 40px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="element">
+                        <h2>ABILITY SCORES</h2>
+                        <div class="group" style="margin-bottom: -10px;">
+                            <ul>
+                                <li>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.strengthScore" id="strengthScore" class="square" style="width: 20px;">
+                                   <label for="strengthScore">STR</label>
+                                </li>
+                                <li>
+                                    <label for="strengthAbilMod">ABIL MOD</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.strengthAbilMod" id="strengthAbilMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="strengthHalfLevelMod">MOD + 1/2 LEVEL</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.initiativehalfLevelMod" id="initiativehalfLevelMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="strengthMiscMod">MISC</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.strengthMiscMod" id="strengthMiscMod" class="square" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <ul>
+                                <li>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.constitutionScore" id="constitutionScore" class="square" style="width: 20px;">
+                                    <label for="constitutionScore">CON</label>
+                                </li>
+                                <li>
+                                    <label for="constitutionAbilMod">ABIL MOD</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.constitutionAbilMod" id="constitutionAbilMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="constitutionHalfLevelMod">MOD + 1/2 LEVEL</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.constitutionHalfLevelMod" id="constitutionHalfLevelMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="constitutionMiscMod">MISC</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.constitutionMiscMod" id="constitutionMiscMod" class="square" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group" style="margin-bottom: -10px;">
+                            <ul>
+                                <li>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.dexterityScore" id="dexterityScore" class="square" style="width: 20px;">
+                                    <label for="dexterityScore">DEX</label>
+                                </li>
+                                <li>
+                                    <label for="dexterityAbilMod">ABIL MOD</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.dexterityAbilMod" id="dexterityAbilMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="dexterityHalfLevelMod">MOD + 1/2 LEVEL</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.dexterityHalfLevelMod" id="dexterityHalfLevelMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="dexterityMiscMod">MISC</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.dexterityMiscMod" id="dexterityMiscMod" class="square" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <ul>
+                                <li>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.intelligenceScore" id="intelligenceScore" class="square" style="width: 20px;">
+                                    <label for="intelligenceScore">INT</label>
+                                </li>
+                                <li>
+                                    <label for="intelligenceAbilMod">ABIL MOD</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.intelligenceAbilMod" id="intelligenceAbilMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="intelligenceHalfLevelMod">MOD + 1/2 LEVEL</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.intelligenceHalfLevelMod" id="intelligenceHalfLevelMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="intelligenceMiscMod">MISC</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.intelligenceMiscMod" id="intelligenceMiscMod" class="square" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group" style="margin-bottom: -10px;">
+                            <ul>
+                                <li>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.wisdomScore" id="wisdomScore" class="square" style="width: 20px;">
+                                    <label for="wisdomScore">WIS</label>
+                                </li>
+                                <li>
+                                    <label for="wisdomAbilMod">ABIL MOD</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.wisdomAbilMod" id="wisdomAbilMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="wisdomHalfLevelMod">MOD + 1/2 LEVEL</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.wisdomHalfLevelMod" id="wisdomHalfLevelMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="wisdomMiscMod">MISC</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.wisdomMiscMod" id="wisdomMiscMod" class="square" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group">
+                            <ul>
+                                <li>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.charismaScore" id="charismaScore" class="square" style="width: 20px;">
+                                    <label for="charismaScore">CHA</label>
+                                </li>
+                                <li>
+                                    <label for="charismaAbilMod">ABIL MOD</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.charismaAbilMod" id="charismaAbilMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="charismaHalfLevelMod">MOD + 1/2 LEVEL</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.charismaHalfLevelMod" id="charismaHalfLevelMod" class="square" style="width: 20px;">
+                                </li>
+                                <li>
+                                    <label for="charismaMiscMod">MISC</label><br>
+                                    <input type="text" ng-model="characterSheetCtrl.characterData.charismaMiscMod" id="charismaMiscMod" class="square" style="width: 20px;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li><!--
+            --><li>
+                <div class="element">
+                    <h2>DEFENSES</h2>
+                    <div class="group">
+                        <ul style="padding: 4px;">
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acScore" id="acScore" class="square" style="width: 20px;">
+                                <label for="acScore">AC</label>
+                            </li>
+                            <li>
+                                <label for="acBasePlusHalfLevel">10 + <br>1/2 lvl</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acBasePlusHalfLevel" id="acBasePlusHalfLevel" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="acArmorAbilMod">armor/<br>abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acArmorAbilMod" id="acArmorAbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="acClassMod">class</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acClassMod" id="acClassMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="acFeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acFeatMod" id="acFeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="acEnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acEnhMod" id="acEnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="acMisc1Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acMisc1Mod" id="acMisc1Mod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="acMisc2Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.acMisc2Mod" id="acMisc2Mod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group" style="margin-top: 40px">
+                        <ul style="padding: 2px;">
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortScore" id="fortScore" class="square" style="width: 20px;">
+                                <label for="fortScore">FORT</label>
+                            </li>
+                            <li>
+                                <label for="fortBasePlusHalfLevel">10 + <br>1/2 lvl</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortBasePlusHalfLevel" id="fortBasePlusHalfLevel" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="fortAbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortAbilMod" id="fortAbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="fortClassMod">class</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortClassMod" id="fortClassMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="fortFeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortFeatMod" id="fortFeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="fortEnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortEnhMod" id="fortEnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="fortMisc1Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortMisc1Mod" id="fortMisc1Mod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="fortMisc2Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.fortMisc2Mod" id="fortMisc2Mod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group" style="margin-top: 70px">
+                        <ul style="padding: 2px;">
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refScore" id="refScore" class="square" style="width: 20px;">
+                                <label for="refScore">REF</label>
+                            </li>
+                            <li>
+                                <label for="refBasePlusHalfLevel">10 + <br>1/2 lvl</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refBasePlusHalfLevel" id="refBasePlusHalfLevel" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="refAbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refAbilMod" id="refAbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="refClassMod">class</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refClassMod" id="refClassMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="refFeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refFeatMod" id="refFeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="refEnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refEnhMod" id="refEnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="refMisc1Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refMisc1Mod" id="refMisc1Mod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="refMisc2Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.refMisc2Mod" id="refMisc2Mod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group" style="margin-top: 70px">
+                        <ul style="padding: 4px;">
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willScore" id="willScore" class="square" style="width: 20px;">
+                                <label for="willScore">WILL</label>
+                            </li>
+                            <li>
+                                <label for="willBasePlusHalfLevel">10 + <br>1/2 lvl</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willBasePlusHalfLevel" id="willBasePlusHalfLevel" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="willAbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willAbilMod" id="willAbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="willClassMod">class</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willClassMod" id="willClassMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="willFeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willFeatMod" id="willFeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="willEnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willEnhMod" id="willEnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="willMisc1Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willMisc1Mod" id="willMisc1Mod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="willMisc2Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.willMisc2Mod" id="willMisc2Mod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li><!--
+            --><li>
+                <div class="element">
+                    <h2>MOVEMENT</h2>
+                    <div class="group">
+                        <ul>
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.speedScore" id="speedScore" class="square" style="width: 20px;">
+                                <label for="speedScore">SPEED (squares)</label>
+                            </li>
+                            <li>
+                                <label for="speedBase">base</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.speedBase" id="speedBase" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="speedArmorMod">armor</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.speedArmorMod" id="speedArmorMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="speedItemMod">item</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.speedItemMod" id="speedItemMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="speedMiscMod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.speedMiscMod" id="speedMiscMod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="element">
+                    <h2>SENSES</h2>
+                    <div class="group" style="margin-bottom: -10px;">
+                        <ul>
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.passiveInsightScore" id="passiveInsightScore" class="square" style="width: 20px;">
+                                <label for="passiveInsightScore">Passive insight : 10 + </label>
+                            </li>
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.passiveInsightMod" id="passiveInsightMod" class="square" style="width: 20px;">
+                                <label for="passiveInsightMod">skill bonus</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <ul>
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.passivePerceptionScore" id="passivePerceptionScore" class="square" style="width: 20px;">
+                                <label for="passivePerceptionScore">Passive perception : 10 + </label>
+                            </li>
+                            <li>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.passivePerceptionMod" id="passivePerceptionMod" class="square" style="width: 20px;">
+                                <label for="passivePerceptionMod">skill bonus</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="element">
+                    <h2>ATTACK WORKSPACE</h2>
+                    <div class="group" style="margin-bottom: -10px;">
+                        <ul style="padding: 4px;">
+                            <li>
+                                <label for="att1Bonus">att bonus</label><br>
+                                <span style="color: white;">+</span>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1Bonus" id="att1Bonus" class="square" style="width: 30px;">
+                            </li>
+                            <li>
+                                <label for="att1HalfLevelMod">1/2 lvl</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1HalfLevelMod" id="att1HalfLevelMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att1AbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1AbilMod" id="att1AbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att1ClassMod">class</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1ClassMod" id="att1ClassMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att1ProfMod">prof</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1ProfMod" id="att1ProfMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att1FeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1FeatMod" id="att1FeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att1EnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1EnhMod" id="att1EnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att1MiscMod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att1MiscMod" id="att1MiscMod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <ul style="padding: 4px;">
+                            <li>
+                                <label for="att2Bonus">att bonus</label><br>
+                                <span style="color: white;">+</span>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2Bonus" id="att2Bonus" class="square" style="width: 30px;">
+                            </li>
+                            <li>
+                                <label for="att2HalfLevelMod">1/2 lvl</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2HalfLevelMod" id="att2HalfLevelMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att2AbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2AbilMod" id="att2AbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att2ClassMod">class</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2ClassMod" id="att2ClassMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att2ProfMod">prof</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2ProfMod" id="att2ProfMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att2FeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2FeatMod" id="att2FeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att2EnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2EnhMod" id="att2EnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="att2MiscMod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.att2MiscMod" id="att2MiscMod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="element">
+                    <h2>DAMAGE WORKSPACE</h2>
+                    <div class="group" style="margin-bottom: -10px;">
+                        <ul style="padding: 4px;">
+                            <li>
+                                <label for="damage1Score">damage</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage1Score" id="damage1Score" class="square" style="width: 50px;">
+                            </li>
+                            <li>
+                                <label for="damage1AbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage1AbilMod" id="damage1AbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage1FeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage1FeatMod" id="damage1FeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage1EnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage1EnhMod" id="damage1EnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage1Misc1Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage1Misc1Mod" id="damage1Misc1Mod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage1Misc2Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage1Misc2Mod" id="damage1Misc2Mod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="group">
+                        <ul style="padding: 4px;">
+                            <li>
+                                <label for="damage2Score">damage</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage2Score" id="damage2Score" class="square" style="width: 50px;">
+                            </li>
+                            <li>
+                                <label for="damage2AbilMod">abil</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage2AbilMod" id="damage2AbilMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage2FeatMod">feat</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage2FeatMod" id="damage2FeatMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage2EnhMod">enh</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage2EnhMod" id="damage2EnhMod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage2Misc1Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage2Misc1Mod" id="damage2Misc1Mod" class="square" style="width: 20px;">
+                            </li>
+                            <li>
+                                <label for="damage2Misc2Mod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.damage2Misc2Mod" id="damage2Misc2Mod" class="square" style="width: 20px;">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

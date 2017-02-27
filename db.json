@@ -9,7 +9,7 @@
     {
       "id": 2,
       "title": "L'appel de Cthulhu",
-      "image": "http://www.sans-detour.com/wp-content/uploads/2013/03/tet_adc.jpg",
+      "image": "http://www.begamer.be/wp-content/uploads/2016/02/Call-of-Cthulhu-Logo.jpg",
       "template": 2
     }
   ],
@@ -29,126 +29,50 @@
           "id": 1,
           "player": 2,
           "characterName": "Gurdil",
-          "characterSheet": [
-            {
-              "width": 12,
-              "type": "header",
-              "elements": [
-                {
-                  "type": "image",
-                  "url": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png"
-                },
-                {
-                  "type": "text",
-                  "displayName": "Player Name",
-                  "name": "playerName",
-                  "value": "Tom Bombadil"
-                }
-              ]
-            },
-            {
-              "width": 12,
-              "type": "body",
-              "elements": [
-                {
-                  "type": "text",
-                  "displayName": "Character Name",
-                  "name": "characterName",
-                  "value": "Gurdil"
-                },
-                {
-                  "type": "number",
-                  "displayName": "Level",
-                  "name": "level",
-                  "value": 1
-                },
-                {
-                  "type": "text",
-                  "displayName": "Class",
-                  "name": "class",
-                  "value": "Warrior"
-                },
-                {
-                  "type": "text",
-                  "displayName": "Parangon Path",
-                  "name": "parangonPath",
-                  "value": null
-                },
-                {
-                  "type": "text",
-                  "displayName": "Epic Destiny",
-                  "name": "epicDestiny",
-                  "value": null
-                },
-                {
-                  "type": "number",
-                  "displayName": "Total XP",
-                  "name": "totalXP",
-                  "value": 0
-                },
-                {
-                  "type": "text",
-                  "displayName": "Race",
-                  "name": "race",
-                  "value": "Dwarf"
-                },
-                {
-                  "type": "number",
-                  "displayName": "Size",
-                  "name": "size",
-                  "value": null
-                },
-                {
-                  "type": "number",
-                  "displayName": "Age",
-                  "name": "age",
-                  "value": null
-                },
-                {
-                  "type": "number",
-                  "displayName": "Gender",
-                  "name": "gender",
-                  "value": null
-                },
-                {
-                  "type": "number",
-                  "displayName": "Height",
-                  "name": "height",
-                  "value": null
-                },
-                {
-                  "type": "number",
-                  "displayName": "Weight",
-                  "name": "weight",
-                  "value": null
-                },
-                {
-                  "type": "text",
-                  "displayName": "Alignment",
-                  "name": "alignment",
-                  "value": null
-                },
-                {
-                  "type": "text",
-                  "displayName": "Deity",
-                  "name": "deity",
-                  "value": null
-                },
-                {
-                  "type": "text",
-                  "displayName": "Adventuring company or other Affiliation",
-                  "name": "adventuringCompanyOrOtherAffiliation",
-                  "value": null
-                }
-              ]
-            }
-          ]
+          "characterSheet": {
+            "characterName": "Gurdil",
+            "level": 1,
+            "class": "Warrior",
+            "parangonPath": "",
+            "epicDestiny": "",
+            "totalXP": 0,
+            "race": "Dwarf",
+            "size": "P",
+            "age": 73,
+            "gender": "H",
+            "height": 1.4,
+            "weight": 96,
+            "alignment": "Chaos Good",
+            "deity": "",
+            "adventuringCompanyOrOtherAffiliation": "La compagnie des fiers à repasser",
+            "initiativeScore": "20",
+            "strengthScore": "20",
+            "constitutionScore": "20",
+            "dexterityScore": "20",
+            "intelligenceScore": "20",
+            "wisdomScore": "20",
+            "charismaScore": "20",
+            "acScore": "10"
+          }
         },
         {
           "id": 2,
           "player": 3,
           "characterName": "Norlenilia de Nilnerolinor",
-          "characterSheet": []
+          "characterSheet": {
+            "characterName": "Norlenilia de Nilnerolinor",
+            "level": "1",
+            "class": "Ranger",
+            "race": "Elve",
+            "size": "M",
+            "age": "223",
+            "gender": "F",
+            "height": "1.98",
+            "weight": "61",
+            "alignment": "Loyal good",
+            "adventuringCompanyOrOtherAffiliation": "La compagnie des fiers à repasser",
+            "totalXP": "0"
+          }
         }
       ]
     },
@@ -190,124 +114,12 @@
     {
       "id": 1,
       "name": "D&D 4 Character Sheet",
-      "squeletton": [
-        {
-          "width": 12,
-          "type": "header",
-          "elements": [
-            {
-              "type": "image",
-              "url": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png"
-            },
-            {
-              "type": "text",
-              "displayName": "Player Name",
-              "name": "playerName",
-              "value": null
-            }
-          ]
-        },
-        {
-          "width": 12,
-          "type": "body",
-          "elements": [
-            {
-              "type": "text",
-              "displayName": "Character Name",
-              "name": "characterName",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Level",
-              "name": "level",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Class",
-              "name": "class",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Parangon Path",
-              "name": "parangonPath",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Epic Destiny",
-              "name": "epicDestiny",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Total XP",
-              "name": "totalXP",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Race",
-              "name": "race",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Size",
-              "name": "size",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Age",
-              "name": "age",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Gender",
-              "name": "gender",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Height",
-              "name": "height",
-              "value": null
-            },
-            {
-              "type": "number",
-              "displayName": "Weight",
-              "name": "weight",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Alignment",
-              "name": "alignment",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Deity",
-              "name": "deity",
-              "value": null
-            },
-            {
-              "type": "text",
-              "displayName": "Adventuring company or other Affiliation",
-              "name": "adventuringCompanyOrOtherAffiliation",
-              "value": null
-            }
-          ]
-        }
-      ]
+      "squeletton": "DD4Template"
     },
     {
       "id": 2,
-      "name": "Call of Cthullhu character sheet"
+      "name": "Call of Cthullhu character sheet",
+      "squeletton": ""
     }
   ]
 }

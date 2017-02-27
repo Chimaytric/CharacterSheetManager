@@ -1,15 +1,5 @@
-<div class="row" ng-repeat="bloc in characterSheetCtrl.characterSheet">
-    <div class="col-md-{{bloc.width}}" ng-class="{ 'well': (bloc.type === 'header'), 'panel panel-default': (bloc.type === 'body')}">
-        <div class="row" ng-class="{'panel-body': (bloc.type === 'body')}">
-            <div class="form-inline">
-                <div class="form-group" ng-repeat="element in bloc.elements">
-                    <img ng-if="element.type === 'image'" ng-src="{{element.url}}" class="img-responsive" style="max-width: 300px; margin: 0 50px;">
-                    <div ng-if="element.type !== 'image'" class="form-group" style="margin: 5px;">
-                        <label for="{{element.name}}">{{element.displayName}} : </label>
-                        <input type="{{element.type}}" id="{{element.id}}" class="form-control input-sm" value="{{(element.value !== null) ? element.value : ''}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="well">
+    <button class="btn btn-primary" ng-click="characterSheetCtrl.saveCharacterSheet()">Save changes</button>
+    (All changes will be permanently saved, do not attempt to reload the page)
 </div>
+<div ng-include="'../templates/'+characterSheetCtrl.template.squeletton+'/template.html'"></div>
