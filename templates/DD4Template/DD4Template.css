@@ -43,7 +43,7 @@
 }
 #DD4Template .section ul li .group ul{ padding: 4px 20px;
     margin: 15px 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 #DD4Template .section ul li .group ul li{ width: auto;
     vertical-align: baseline;
@@ -52,4 +52,7 @@
     font-weight: bold;
     font-size: 0.7em;
 }
-#DD4Template .section ul li .group ul li input{ height: 20px;}
+#DD4Template .section ul li .group ul li input{ height: 20px;
+    border: thin solid black;
+    color: black;
+}
