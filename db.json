@@ -121,5 +121,12 @@
       "name": "Call of Cthullhu character sheet",
       "squeletton": ""
     }
+  ],
+  "themes": [
+    {
+      "id": 1,
+      "name": "medieval",
+      "squeleton": "medievalTheme"
+    }
   ]
 }

@@ -1,5 +1,9 @@
 function RootController(){
     console.log('Root component');
+
+    var vm = this;
+
+    vm.theme = "toto";
 }
 
 RootController.$inject = [];
