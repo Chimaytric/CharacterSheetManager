@@ -22,6 +22,7 @@
 #DD4Template .heading ul li input.squared{ border: 1px solid rgba(0, 0, 0, 0.3); }
 #DD4Template .heading ul li label{ font-size: 0.8em; }
 
+#DD4Template .section > ul{ padding: 0; }
 #DD4Template .section ul{ list-style-type: none;
     text-align: center;
 }
@@ -55,4 +56,30 @@
 #DD4Template .section ul li .group ul li input{ height: 20px;
     border: thin solid black;
     color: black;
+}
+
+#DD4Template .section ul li table th{ font-weight: thin;
+    font-size: 0.7em;
+    padding: 2px;
+    text-align: center;
+    line-height: 1;
+}
+#DD4Template .section ul li table tbody tr{ padding: 4px 0; }
+#DD4Template .section ul li table tr:nth-child(even){ background-color:  rgba(0, 0, 0, 0.3); }
+#DD4Template .section ul li table tr td{ text-align: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0 2px;
+}
+#DD4Template .section ul li table tr td input{ width: 100%; }
+#DD4Template .section ul li table tr td input.square{ border: 1px solid black; }
+#DD4Template .section ul li table tr td input.baseline{ border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+#DD4Template .section ul li textarea{ width: 100%;
+    border: none;
+    background: #fff url(http://i.imgur.com/05U73.png) 0 0 repeat;
+    line-height: 16px;
 }
