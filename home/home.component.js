@@ -49,8 +49,13 @@ function HomeController(gameSessionsFactory){
         console.log(vm.newSession);
         vm.newSession.game = vm.newSession.game.id;
         vm.newSession.gameMaster = vm.newSession.gameMaster.id;
+        vm.newSession.characters = [];
         vm.newSession.players.forEach(function(player, index){
             vm.newSession.players[index] = player.id;
+            vm.newSession.characters.push({
+                player: player.id,
+                characterSheet: {}
+            });
         });
         console.log(vm.newSession);
         

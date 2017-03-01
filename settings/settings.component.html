@@ -1,0 +1,16 @@
+<div class = "page-header">
+    <h1>Settings</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-group">
+        <li class="list-group-item">
+            <h3>Theme : {{settingsCtrl.currentTheme.name}}</h3>
+            <form class="form-inline">
+                <select class="form-control input-sm" ng-model="settingsCtrl.newTheme" ng-options="theme.name for theme in settingsCtrl.themes"></select>
+                <button type="submit" class="btn btn-default" ng-click="settingsCtrl.applyNewTheme()">Apply theme</button>
+            </form>
+        </li>
+        </ul>
+    </div>
+</div>

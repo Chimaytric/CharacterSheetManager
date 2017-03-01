@@ -1,5 +1,6 @@
 #DD4Template{ border: thin solid rgba(0, 0, 0, 0.4);
     border-top: none;
+    background-color: white;
 }
 
 #DD4Template .header img{ display: block;

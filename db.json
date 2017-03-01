@@ -1,90 +1,52 @@
 {
   "games": [
     {
-      "id": 1,
-      "title": "Donjons et Dragons",
-      "image": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png",
-      "template": 1
-    },
-    {
       "id": 2,
       "title": "L'appel de Cthulhu",
       "image": "http://www.begamer.be/wp-content/uploads/2016/02/Call-of-Cthulhu-Logo.jpg",
       "template": 2
+    },
+    {
+      "title": "Dungeons & Dragons 4",
+      "image": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png",
+      "template": 1,
+      "id": 3
     }
   ],
   "gameSessions": [
     {
-      "id": 1,
-      "name": "La porte de Baldur",
-      "game": 1,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta.",
-      "gameMaster": 1,
       "players": [
         2,
         3
       ],
       "characters": [
         {
-          "id": 1,
           "player": 2,
-          "characterName": "Gurdil",
           "characterSheet": {
-            "characterName": "Gurdil",
-            "level": 1,
-            "class": "Warrior",
-            "parangonPath": "",
-            "epicDestiny": "",
-            "totalXP": 0,
-            "race": "Dwarf",
+            "characterName": "Gurdil Cul Brillant",
+            "level": "1",
+            "class": "Guerrier",
+            "totalXP": "0",
+            "race": "Nain",
             "size": "P",
-            "age": 73,
+            "age": "112",
             "gender": "H",
-            "height": 1.4,
-            "weight": 96,
-            "alignment": "Chaos Good",
-            "deity": "",
-            "adventuringCompanyOrOtherAffiliation": "La compagnie des fiers à repasser",
-            "initiativeScore": "20",
-            "strengthScore": "20",
-            "constitutionScore": "20",
-            "dexterityScore": "20",
-            "intelligenceScore": "20",
-            "wisdomScore": "20",
-            "charismaScore": "20",
-            "acScore": "10"
+            "height": "1.35",
+            "weight": "96",
+            "alignment": "Chaotique bon",
+            "adventuringCompanyOrOtherAffiliation": "La compagnie des fiers à bras"
           }
         },
         {
-          "id": 2,
           "player": 3,
-          "characterName": "Norlenilia de Nilnerolinor",
-          "characterSheet": {
-            "characterName": "Norlenilia de Nilnerolinor",
-            "level": "1",
-            "class": "Ranger",
-            "race": "Elve",
-            "size": "M",
-            "age": "223",
-            "gender": "F",
-            "height": "1.98",
-            "weight": "61",
-            "alignment": "Loyal good",
-            "adventuringCompanyOrOtherAffiliation": "La compagnie des fiers à repasser",
-            "totalXP": "0"
-          }
+          "characterSheet": {}
         }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "The dark mansion",
-      "game": 2,
-      "gameMaster": 3,
-      "players": [
-        1,
-        2
-      ]
+      ],
+      "gameMaster": 1,
+      "name": "La porte de Baldur",
+      "game": 3,
+      "description": "La Porte de Baldur est une immense cité-état située sur la Côte des Épées, sur la rive nord de la rivière Chionthar, à une trentaine de kilomètres à l'est de son embouchure sur la Mer des Épées. La Porte de Baldur se trouve au sud d'Eauprofonde et au nord du pays d'Amn, et est située le long de la très fréquentée Voie Côtière.\nCette cité portuaire est prospère, avec plus de 42 000 habitants (bien que ce nombre double presque au cours des mois d'été), la Porte de Baldur est une des villes marchandes les plus importantes de la Côte des Épées. La garde de la ville et la présence de la puissante compagnie de mercenaires du Poing Enflammé assurent la tranquillité et la sécurité de la cité.",
+      "id": 3
     }
   ],
   "players": [
@@ -125,8 +87,11 @@
   "themes": [
     {
       "id": 1,
-      "name": "medieval",
+      "name": "Medieval",
       "squeleton": "medievalTheme"
     }
-  ]
+  ],
+  "settings": {
+    "theme": 0
+  }
 }
