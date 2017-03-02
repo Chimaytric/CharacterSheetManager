@@ -79,12 +79,16 @@
                                 <input type="text" ng-model="characterSheetCtrl.characterData.initiativeScore" id="initiativeScore" class="square" style="width: 40px;">
                             </li>
                             <li>
-                                <label for="initiativeDexMod">DEX</label>
+                                <label for="initiativeDexMod">DEX</label><br>
                                 <input type="text" ng-model="characterSheetCtrl.characterData.initiativeDexMod" id="initiativeDexMod" class="square" style="width: 40px;">
                             </li>
                             <li>
-                                <label for="initiativehalfLevelMod">1/2 LEVEL</label>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativehalfLevelMod" id="initiativehalfLevelMod" class="square" style="width: 40px;">
+                                <label for="initiativeHalfLevelMod">1/2 level</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativeHalfLevelMod" id="initiativeHalfLevelMod" class="square" style="width: 40px;">
+                            </li>
+                            <li>
+                                <label for="initiativeMiscMod">misc</label><br>
+                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativeMiscMod" id="initiativeMiscMod" class="square" style="width: 40px;">
                             </li>
                         </ul>
                     </div>
@@ -103,11 +107,7 @@
                             </li>
                             <li>
                                 <label for="strengthHalfLevelMod">MOD + 1/2 LEVEL</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.initiativehalfLevelMod" id="initiativehalfLevelMod" class="square" style="width: 20px;">
-                            </li>
-                            <li>
-                                <label for="strengthMiscMod">MISC</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.strengthMiscMod" id="strengthMiscMod" class="square" style="width: 20px;">
+                                <input type="text" ng-model="characterSheetCtrl.characterData.strengthHalfLevelMod" id="strengthHalfLevelMod" class="square" style="width: 20px;">
                             </li>
                         </ul>
                     </div>
@@ -125,10 +125,6 @@
                                 <label for="constitutionHalfLevelMod">MOD + 1/2 LEVEL</label><br>
                                 <input type="text" ng-model="characterSheetCtrl.characterData.constitutionHalfLevelMod" id="constitutionHalfLevelMod" class="square" style="width: 20px;">
                             </li>
-                            <li>
-                                <label for="constitutionMiscMod">MISC</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.constitutionMiscMod" id="constitutionMiscMod" class="square" style="width: 20px;">
-                            </li>
                         </ul>
                     </div>
                     <div class="group" style="margin-bottom: -10px;">
@@ -144,10 +140,6 @@
                             <li>
                                 <label for="dexterityHalfLevelMod">MOD + 1/2 LEVEL</label><br>
                                 <input type="text" ng-model="characterSheetCtrl.characterData.dexterityHalfLevelMod" id="dexterityHalfLevelMod" class="square" style="width: 20px;">
-                            </li>
-                            <li>
-                                <label for="dexterityMiscMod">MISC</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.dexterityMiscMod" id="dexterityMiscMod" class="square" style="width: 20px;">
                             </li>
                         </ul>
                     </div>
@@ -165,10 +157,6 @@
                                 <label for="intelligenceHalfLevelMod">MOD + 1/2 LEVEL</label><br>
                                 <input type="text" ng-model="characterSheetCtrl.characterData.intelligenceHalfLevelMod" id="intelligenceHalfLevelMod" class="square" style="width: 20px;">
                             </li>
-                            <li>
-                                <label for="intelligenceMiscMod">MISC</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.intelligenceMiscMod" id="intelligenceMiscMod" class="square" style="width: 20px;">
-                            </li>
                         </ul>
                     </div>
                     <div class="group" style="margin-bottom: -10px;">
@@ -185,10 +173,6 @@
                                 <label for="wisdomHalfLevelMod">MOD + 1/2 LEVEL</label><br>
                                 <input type="text" ng-model="characterSheetCtrl.characterData.wisdomHalfLevelMod" id="wisdomHalfLevelMod" class="square" style="width: 20px;">
                             </li>
-                            <li>
-                                <label for="wisdomMiscMod">MISC</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.wisdomMiscMod" id="wisdomMiscMod" class="square" style="width: 20px;">
-                            </li>
                         </ul>
                     </div>
                     <div class="group">
@@ -204,10 +188,6 @@
                             <li>
                                 <label for="charismaHalfLevelMod">MOD + 1/2 LEVEL</label><br>
                                 <input type="text" ng-model="characterSheetCtrl.characterData.charismaHalfLevelMod" id="charismaHalfLevelMod" class="square" style="width: 20px;">
-                            </li>
-                            <li>
-                                <label for="charismaMiscMod">MISC</label><br>
-                                <input type="text" ng-model="characterSheetCtrl.characterData.charismaMiscMod" id="charismaMiscMod" class="square" style="width: 20px;">
                             </li>
                         </ul>
                     </div>
@@ -852,6 +832,68 @@
                 <div class="element" style="margin-top: -10px;">
                     <h2>FEATS</h2>
                     <textarea rows="10" ng-model="characterSheetCtrl.characterData.feats"></textarea>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="section">
+        <ul>
+            <li>
+                <div class="element">
+                    <h2>AT-WILL POWERS</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.atWillPowers"></textarea>
+                </div>
+                <div class="element">
+                    <h2>ENCOUNTER POWERS</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.encounterPowers"></textarea>
+                </div>
+                <div class="element">
+                    <h2>DAILY POWERS</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.dailyPowers"></textarea>
+                </div>
+                <div class="element">
+                    <h2>UTILITY POWERS</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.utilityPowers"></textarea>
+                </div>
+                <div class="element">
+                    <h2>EQUIPMENT WEALTH AND COINS</h2>
+                    <textarea rows="25" ng-model="characterSheetCtrl.characterData.equipment"></textarea>
+                </div>
+            </li>
+            <li>
+                <div class="element">
+                    <h2>MAGIC ITEMS</h2>
+                    <textarea rows="34" ng-model="characterSheetCtrl.characterData.magicItems"></textarea>
+                </div>
+                <div class="element">
+                    <h2>RITUALS</h2>
+                    <textarea rows="21" ng-model="characterSheetCtrl.characterData.rituals" style="margin-top: 5px;"></textarea>
+                </div>
+            </li>
+            <li>
+                <div class="element">
+                    <img ng-src="{{characterSheetCtrl.characterData.characterImage}}" alt="character image">
+                    <input type="text" placeholder="character image url" ng-model="characterSheetCtrl.characterData.characterImage" id="initiativeScore" class="square">
+                </div>
+                <div class="element">
+                    <h2>PERSONNALITY TRAITS</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.personnalityTraits"></textarea>
+                </div>
+                <div class="element">
+                    <h2>MANNERISMS AND APPEARANCE</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.mannerismsAndAppearance"></textarea>
+                </div>
+                <div class="element">
+                    <h2>CHARACTER BACKGROUND</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.characterBackground"></textarea>
+                </div>
+                <div class="element">
+                    <h2>COMPANIONS AND ALLIES</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.companionsAndAllies"></textarea>
+                </div>
+                <div class="element">
+                    <h2>SESSION AND CAMPAIGN NOTES</h2>
+                    <textarea rows="6" ng-model="characterSheetCtrl.characterData.sessionAndCampaignNotes"></textarea>
                 </div>
             </li>
         </ul>

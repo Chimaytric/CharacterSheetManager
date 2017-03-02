@@ -84,3 +84,15 @@
     background: #fff url(http://i.imgur.com/05U73.png) 0 0 repeat;
     line-height: 16px;
 }
+#DD4Template .section ul li .element > img{ display: block;
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    min-height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: none;
+}
+#DD4Template .section ul li .element > input{ display: block;
+    width: 100%;
+    
+}
