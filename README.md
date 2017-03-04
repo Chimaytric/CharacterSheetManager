@@ -3,6 +3,10 @@ This app is designed to help RPG game master to organise their game sessions
 
 **The project is beginning and clearly not ready to use right now for anything more than testing, stay tuned for more updates**
 
+## Version
+
+This is the bootstrap version
+
 ## Requirements
 - node js
 - http-server : `npm install -g http-server`
