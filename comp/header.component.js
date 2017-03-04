@@ -4,7 +4,7 @@ function HeaderController(){
 
 HeaderController.$inject = [];
 
-angular.module('characterSheetmanager.headerComponent', ['ui.bootstrap']).component('headerComponent', {
+angular.module('characterSheetmanager.headerComponent', []).component('headerComponent', {
     templateUrl: 'comp/header.component.html',
     controller: HeaderController,
     controllerAs: "headerCtrl",
