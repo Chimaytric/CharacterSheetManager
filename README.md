@@ -5,7 +5,7 @@ This app is designed to help RPG game master to organise their game sessions
 
 ## Version
 
-This is the bootstrap version
+This is the material version
 
 ## Requirements
 - node js
