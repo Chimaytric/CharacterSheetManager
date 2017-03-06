@@ -1,8 +1,15 @@
-function HeaderController(){
+function HeaderController($timeout, $mdSidenav){
     console.log('Header component');
+
+    var vm = this;
+
+    vm.toggleSidenav = function(){
+        $mdSidenav('left').toggle();
+    }
+
 }
 
-HeaderController.$inject = [];
+HeaderController.$inject = ['$timeout', '$mdSidenav'];
 
 angular.module('characterSheetmanager.headerComponent', []).component('headerComponent', {
     templateUrl: 'comp/header.component.html',

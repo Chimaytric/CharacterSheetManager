@@ -1,16 +1,27 @@
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container">
-        <div class="navbar-header">
-            <div class="navbar-brand">Character Sheet Manager</div>
-        </div>
-        <ul class="nav navbar-nav">
-            <li><a ui-sref="home">Game sessions</a></li>
-            <li><a ui-sref="games">Games</a></li>
-            <li><a ui-sref="players">Players</a></li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-            <li>
-                <p class="navbar-btn"><a ui-sref="settings" class="btn btn-default"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></p></li>
-        </ul>
-    </div>
-</nav>
+
+<md-toolbar layout="row" class="md-toolbar-tools">
+    <md-button class="menu md-icon-button" aria-label="Show User List" ng-click="headerCtrl.toggleSidenav()">
+        <i class="material-icons">menu</i>
+    </md-button>
+    <h1>Angular Material - Starter App</h1>
+</md-toolbar>
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2 hide-print ng-isolate-scope _md" md-component-id="left" tabindex="-1">
+    <header class="nav-header">
+        <md-card>
+ <img src="https://developers.google.com/experts/img/user/user-default.png" class="md-card-image" alt="image caption">
+ <md-card-content>
+   <h2>Card headline</h2>
+   <p>Card content</p>
+ </md-card-content>
+ <md-card-actions layout="row" layout-align="end center">
+   <md-button>Action 1</md-button>
+   <md-button>Action 2</md-button>
+ </md-card-actions>
+</md-card>
+    </header>
+        <md-list>
+            <md-list-item ng-href="#">Game sessions</md-list-item>
+            <md-list-item ng-href="#">Games</md-list-item>
+            <md-list-item ng-href="#">Players</md-list-item>
+        </md-list>
+</md-sidenav>

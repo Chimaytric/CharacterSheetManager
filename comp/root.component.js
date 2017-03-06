@@ -2,15 +2,6 @@ function RootController(rootFactory){
     console.log('Root component');
 
     var vm = this;
-
-    rootFactory.getSettings().then(function(settings){
-        vm.settings = settings;
-        if(vm.settings.theme !== 0){
-            rootFactory.getThemeById(vm.settings.theme).then(function(theme){
-                vm.currentTheme = theme;
-            });
-        }
-    });
 }
 
 RootController.$inject = ['rootFactory'];
