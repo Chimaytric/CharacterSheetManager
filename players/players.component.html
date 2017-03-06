@@ -1,3 +1,90 @@
+<md-list flex="">
+    <md-subheader class="md-no-sticky">Players</md-subheader>
+    <md-list-item class="md-2-line" ng-repeat="player in playersCtrl.players">
+        <img ng-src="{{player.picture}}" class="md-avatar" alt="{{item.who}}">
+        <div class="md-list-item-text" layout="column">
+            <h3>{{player.firstName}} {{player.lastName}}</h3>
+            <p>{{player.description}}</p>
+        </div>
+        <span flex></span>
+        <div class="md-list-item-text" layout="column">
+            <md-menu>
+                <md-button class="md-icon-button" aria-label="User Settings" ng-click="playersCtrl.openMenu($mdMenu, $event)">
+                    <md-icon><i class="material-icons">more_vert</i></md-icon>
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button>
+                            <md-icon><i class="material-icons">delete</i></md-icon>
+                            Delete player
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </md-list-item>
+</md-list>
+
+<md-button class="md-fab md-fab-bottom-right" aria-label="add" ng-click="playersCtrl.openForm($event)">
+    <md-icon><i class="material-icons">add</i></md-icon>
+</md-button>
+
+<script type="text/ng-template" id="dialog1.tmpl.html">
+    <md-dialog aria-label="New player" flex="50">
+        <form ng-cloak>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>New Player</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="cancel()">
+                        <md-icon aria-label="Close dialog"><i class="material-icons">close</i></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-dialog-content>
+                <div class="md-dialog-content">
+                    <div layout="row">
+                        <md-input-container>
+                            <label>First name : </label>
+                            <input ng-model="user.company">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Last name : </label>
+                            <input ng-model="user.company">
+                        </md-input-container>
+                        <span flex></span>
+                        <md-input-container>
+                            <label>Picture : </label>
+                            <input ng-model="user.company">
+                        </md-input-container>
+                    </div>
+
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Gender</label>
+                            <md-select ng-model="ctrl.userState">
+                                <md-option value="axe">Axe</md-option>
+                                <md-option value="sword">Sword</md-option>
+                                <md-option value="wand">Wand</md-option>
+                                <md-option value="pen">Pen</md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Description</label>
+                            <textarea ng-model="ctrl.biography" md-maxlength="1000" rows="5" md-select-on-focus="" aria-label="description"></textarea>
+                        </md-input-container>
+                </div>
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+                <md-button class="md-raised" ng-click="cancel()">Cancel</md-button>
+                <md-button class="md-raised md-primary" ng-click="submit()">Create</md-button>
+            </md-dialog-actions>
+            </form>
+    </md-dialog>
+</script>
+
+<!--
 <div class = "page-header">
     <h1>Players</h1>
 </div>
@@ -44,3 +131,4 @@
         <br>
     </div>
 </div>
+-->

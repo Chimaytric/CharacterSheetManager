@@ -1,4 +1,4 @@
-function PlayersController(playersFactory){
+function PlayersController(playersFactory, $mdDialog){
     console.log('Players controller');
 
     var vm = this;
@@ -31,18 +31,44 @@ function PlayersController(playersFactory){
     vm.getPlayers = function(){
         playersFactory.getPlayers().then(function(players){
             vm.players = players;
-            vm.players.forEach(function(player, index){
-                if(player.gender === 0){
-                    player.image = "https://www.w3schools.com/bootstrap/img_avatar3.png";
-                } else
-                    player.image = "https://www.w3schools.com/bootstrap/img_avatar4.png";
-            });
         });
     }
     vm.getPlayers();
+
+    vm.openMenu = function($mdMenu, ev){
+        $mdMenu.open(ev);
+    }
+
+    vm.openForm = function(ev){
+        $mdDialog.show({
+            controller: DialogController,
+            templateUrl: 'dialog1.tmpl.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true,
+            fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+        }).then(function(answer) {
+            vm.status = 'You said the information was "' + answer + '".';
+        }, function() {
+            vm.status = 'You cancelled the dialog.';
+        });
+    }
+    function DialogController($scope, $mdDialog) {
+        $scope.hide = function() {
+        $mdDialog.hide();
+        };
+
+        $scope.cancel = function() {
+        $mdDialog.cancel();
+        };
+
+        $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+        };
+    }
 }
 
-PlayersController.$inject = ['playersFactory'];
+PlayersController.$inject = ['playersFactory', '$mdDialog'];
 
 angular.module('characterSheetmanager.playersComponent', []).component('playersComponent', {
     templateUrl: 'players/players.component.html',

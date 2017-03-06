@@ -1,3 +1,27 @@
+<div flex-gt-sm="100" layout="column">
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{gameSessionDetailCtrl.gameSession.name}}</span>
+                <span class="md-subhead">An adventure of <b>{{gameSessionDetailCtrl.gameSession.game.title}}</b></span>
+                <p>{{gameSessionDetailCtrl.gameSession.description}}</p>
+                <p><b>Mastered by : </b>{{gameSessionDetailCtrl.gameSession.gameMaster.firstName}} {{gameSessionDetailCtrl.gameSession.gameMaster.lastName}}</p>
+                <p>
+                    <b>Featuring : </b>
+                    <span ng-repeat="character in gameSessionDetailCtrl.gameSession.characters">
+                        <span ng-if="!$last && !$first">, </span>
+                        <span ng-if="$last && !$first"> and </span>
+                        {{character.player.firstName}} {{character.player.lastName}}
+                    </span>
+                </p>
+            </md-card-title-text>
+            <md-card-title-media>
+                <img ng-src="{{gameSessionDetailCtrl.gameSession.game.image}}" class="md-card-image" alt="{{gameSessionDetailCtrl.gameSession.game.image}}">
+            </md-card-title-media>
+        </md-card-title>
+    </md-card>
+</div>
+<!--
 <div class="jumbotron">
     <div class="row">
         <div class="col-md-7">
@@ -10,6 +34,13 @@
         </div>
     </div>
 </div>
+-->
+<md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+      <md-nav-item ng-repeat="character in gameSessionDetailCtrl.gameSession.characters" md-nav-click="goto('page1')" name="{{character.player.id}}">
+        {{character.player.firstName}} {{character.player.lastName}}</span>
+      </md-nav-item>
+</md-nav-bar>
+<!--
 <div class="row">
     <div class="col-md-6">
         <div class="panel panel-primary">
@@ -45,3 +76,4 @@
         </div>
     </div>
 </div>
+-->

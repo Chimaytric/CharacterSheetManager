@@ -4,7 +4,6 @@ angular.module('characterSheetmanager', [
     'ui.router',
     'ngMaterial',
     'characterSheetmanager.rootComponent',
-    'characterSheetmanager.headerComponent',
     'characterSheetmanager.homeComponent',
     'characterSheetmanager.gamesComponent',
     'characterSheetmanager.playersComponent',

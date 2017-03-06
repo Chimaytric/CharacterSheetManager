@@ -3,12 +3,12 @@
     {
       "id": 2,
       "title": "L'appel de Cthulhu",
-      "image": "http://www.begamer.be/wp-content/uploads/2016/02/Call-of-Cthulhu-Logo.jpg",
+      "image": "http://cdn.edgecast.steamstatic.com/steam/apps/22340/header.jpg?t=1447351848",
       "template": 2
     },
     {
       "title": "Dungeons & Dragons 4",
-      "image": "http://www.pop-cultured.net/wp-content/uploads/2015/04/Dungeons-and-Dragons.png",
+      "image": "http://www.wilwarin.fr/wp-content/uploads/2014/10/donjon_dragon_2.jpg",
       "template": 1,
       "id": 3
     }
@@ -237,7 +237,7 @@
       "gameMaster": 2,
       "name": "Le manoir des ombres",
       "game": 2,
-      "description": "bouh",
+      "description": "Ecoutez, je dois absolument me rendre à Crowsburg, dès ce soir. C’est un petit village, un peu reculé, au nord-ouest d’ici. Si vous m’emmenez là-bas, je vous donnerai 10 000 $, à chacun.",
       "characters": [
         {
           "player": 1,
@@ -256,6 +256,7 @@
       "id": 1,
       "lastName": "Sacquet",
       "firstName": "Bilbon",
+      "picture": "https://lh4.googleusercontent.com/-mYku29qTIZ0/AAAAAAAAAAI/AAAAAAAAA7k/cqLTYQEx7IU/photo.jpg",
       "gender": 0,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta."
     },
@@ -263,6 +264,7 @@
       "id": 2,
       "lastName": "Bombadil",
       "firstName": "Tom",
+      "picture": "http://www.electricferret.com/static/images/cbub/cbub_contender_image/6/2524/2524.jpg",
       "gender": 0,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta."
     },
@@ -270,6 +272,7 @@
       "id": 3,
       "lastName": "Dullac",
       "firstName": "Dame",
+      "picture": "http://www.councilofelrond.com/wp-content/uploads/modules/My_eGallery/gallery/characters/galadriel/galadriel_ca_022.JPG",
       "gender": 1,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel purus lorem. Aliquam tempus malesuada blandit. Mauris vehicula nulla et ex malesuada suscipit. Donec ac nunc justo. Morbi quis suscipit leo. Sed sodales risus libero, at hendrerit dolor scelerisque vel. Praesent volutpat suscipit tincidunt. Mauris molestie faucibus est sit amet porta."
     }

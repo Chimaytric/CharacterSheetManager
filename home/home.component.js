@@ -1,7 +1,39 @@
-function HomeController(gameSessionsFactory){
+function HomeController(gameSessionsFactory, $mdDialog){
     console.log('Home component');
 
     var vm = this;
+
+    vm.openMenu = function($mdMenu, ev){
+        $mdMenu.open(ev);
+    }
+
+    vm.openForm = function(ev){
+        $mdDialog.show({
+            controller: DialogController,
+            templateUrl: 'dialog1.tmpl.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true,
+            fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+        }).then(function(answer) {
+            vm.status = 'You said the information was "' + answer + '".';
+        }, function() {
+            vm.status = 'You cancelled the dialog.';
+        });
+    }
+    function DialogController($scope, $mdDialog) {
+        $scope.hide = function() {
+        $mdDialog.hide();
+        };
+
+        $scope.cancel = function() {
+        $mdDialog.cancel();
+        };
+
+        $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+        };
+    }
 
     vm.newSession = {
         players: []
@@ -77,7 +109,7 @@ function HomeController(gameSessionsFactory){
 
 }
 
-HomeController.$inject = ['gameSessionsFactory'];
+HomeController.$inject = ['gameSessionsFactory', '$mdDialog'];
 
 angular.module('characterSheetmanager.homeComponent', []).component('homeComponent', {
     templateUrl: 'home/home.component.html',

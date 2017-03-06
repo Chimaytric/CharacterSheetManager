@@ -66,51 +66,110 @@
         </div>
     </div>
     -->
-    <md-content>
-    <md-tabs md-dynamic-height="" md-border-bottom="">
-      <md-tab label="one">
-        <md-content class="md-padding" layout="row">
-            <md-card ng-repeat="gameSession in homeCtrl.gameSessions">
-                <md-card-title>
-                    <md-card-title-text>
-                        <span class="md-headline">{{gameSession.name}}</span>
+    <div class='md-padding' layout="row" layout-wrap >
+        <div flex-gt-sm="50" layout="column" ng-repeat="gameSession in homeCtrl.gameSessions">
+            <md-card>
+                <md-card-header>
+                    <md-card-header-text>
+                        <span class="md-title">{{gameSession.name}}</span>
                         <span class="md-subhead">A {{gameSession.game.title}} adventure.</span>
-                    </md-card-title-text>
-                    <md-card-title-media>
-                        <div class="md-media-lg card-media">
-                            <img ng-src="{{gameSession.game.image}}" alt="{{gameSession.game.image}}" class="md-card-image">
-                        </div>
-                    </md-card-title-media>
-                </md-card-title>
+                    </md-card-header-text>
+                    <span flex></span>
+                    <md-menu>
+                        <md-button class="md-icon-button" aria-label="User Settings" ng-click="homeCtrl.openMenu($mdMenu, $event)">
+                            <md-icon><i class="material-icons">more_vert</i></md-icon>
+                        </md-button>
+                        <md-menu-content width="4">
+                            <md-menu-item>
+                                <md-button>
+                                    <md-icon><i class="material-icons">delete</i></md-icon>
+                                    Delete game session
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-card-header>
+                <img ng-src="{{gameSession.game.image}}" class="md-card-image" alt="Washed Out">
                 <md-card-content>
+                    <p><b>Mastered by : </b>{{gameSession.gameMaster.firstName}} {{gameSession.gameMaster.lastName}}</p>
+                    <p><b>Featuring : </b><span ng-repeat="player in gameSession.players"><span ng-if="!$last && !$first">, </span><span ng-if="$last && !$first"> and </span>{{player.firstName}} {{player.lastName}}</span></p>
+                    <p>{{gameSession.description}}</p>
                 </md-card-content>
                 <md-card-actions layout="row" layout-align="end center">
-                    <md-button class="md-icon-button">
-                        <i class="material-icons">remove_red_eye</i>
-                    </md-button>
-                    <md-button class="md-icon-button">
-                        <i class="material-icons">delete</i>
-                    </md-button>
+                    <md-button class="md-raised md-primary" ui-sref="gameSessionDetail({gameSessionId: gameSession.id})">Details</md-button>
                 </md-card-actions>
             </md-card>
-    </md-content>
-      </md-tab>
-      <md-tab label="two">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Two</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
-          <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-        </md-content>
-      </md-tab>
-      <md-tab label="three">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Tab Three</h1>
-          <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
+        </div>
+    </div>
+    <md-button class="md-fab md-fab-bottom-right" aria-label="add" ng-click="homeCtrl.openForm($event)">
+        <md-icon><i class="material-icons">add</i></md-icon>
+    </md-button>
+
+
+
+<script type="text/ng-template" id="dialog1.tmpl.html">
+    <md-dialog aria-label="New game session" flex="50">
+        <form ng-cloak>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>New game session</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="cancel()">
+                        <md-icon aria-label="Close dialog"><i class="material-icons">close</i></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-dialog-content>
+                <div class="md-dialog-content">
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Name : </label>
+                            <input ng-model="user.company">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Game</label>
+                            <md-select ng-model="ctrl.userState">
+                                <md-option value="axe">Axe</md-option>
+                                <md-option value="sword">Sword</md-option>
+                                <md-option value="wand">Wand</md-option>
+                                <md-option value="pen">Pen</md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Description</label>
+                            <textarea ng-model="ctrl.biography" md-maxlength="1000" rows="5" md-select-on-focus="" aria-label="description"></textarea>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Game Master</label>
+                            <md-select ng-model="ctrl.gameMaster">
+                                <md-option value="axe">Axe</md-option>
+                                <md-option value="sword">Sword</md-option>
+                                <md-option value="wand">Wand</md-option>
+                                <md-option value="pen">Pen</md-option>
+                            </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-xs="">
+                            <label>Players</label>
+                            <md-select ng-model="ctrl.players" multiple="">
+                                <md-option value="axe">Axe</md-option>
+                                <md-option value="sword">Sword</md-option>
+                                <md-option value="wand">Wand</md-option>
+                                <md-option value="pen">Pen</md-option>
+                            </md-select>
+                        </md-input-container>
+                </div>
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+                <md-button class="md-raised" ng-click="cancel()">Cancel</md-button>
+                <md-button class="md-raised md-primary" ng-click="submit()">Create</md-button>
+            </md-dialog-actions>
+            </form>
+        </md-dialog>
+</script>
     <!--
     <div class="col-md-4" ng-repeat="gameSession in homeCtrl.gameSessions">
         <div class="panel panel-default">

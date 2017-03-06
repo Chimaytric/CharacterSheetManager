@@ -1,10 +1,14 @@
-function RootController(rootFactory){
+function RootController(rootFactory, $mdSidenav){
     console.log('Root component');
 
     var vm = this;
+
+    vm.toggleSidenav = function(){
+        $mdSidenav('left').toggle();
+    }
 }
 
-RootController.$inject = ['rootFactory'];
+RootController.$inject = ['rootFactory', '$mdSidenav'];
 
 angular.module('characterSheetmanager.rootComponent', []).component('rootComponent', {
     templateUrl: 'comp/root.component.html',

@@ -1,2 +1,39 @@
-<header-component></header-component>
-<ui-view></ui-view>
+<div layout="row" layout-fill ng-cloak>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" role="sidenav" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-toolbar  class="md-tall" layout-align="end end">
+            <div class="md-toolbar-tools" layout layout-padding>
+                <h2>Menu</h2>
+            </div>
+        </md-toolbar>
+        <md-content role="navigation">
+            <md-list>
+                <md-list-item ui-sref="home">
+                    <p class="md-body-2">Game Sessions</p>
+                    <span flex></span>
+                    <md-icon><i class="material-icons">chevron_right</i></md-icon>
+                </md-list-item>
+                <md-list-item ui-sref="games">
+                    <p class="md-body-2">Games</p>
+                    <span flex></span>
+                    <md-icon><i class="material-icons">chevron_right</i></md-icon>
+                </md-list-item>
+                <md-list-item ui-sref="players">
+                    <p class="md-body-2">Players</p>
+                    <span flex></span>
+                    <md-icon><i class="material-icons">chevron_right</i></md-icon>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+    <section layout="column" role="main" flex>
+        <md-toolbar layout="row" class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="rootCtrl.toggleSidenav()" hide-gt-md aria-label="Menu">
+                <md-icon><i class="material-icons">menu</i></md-icon>
+            </md-button>
+            <h1>Character Sheet Manager</h1>
+        </md-toolbar>
+        <section id="content" role="content" layout="column" layout-padding md-scroll-y>
+            <ui-view></ui-view>
+        </section>
+    </section>
+</div>
