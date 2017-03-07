@@ -1,5 +1,10 @@
-<div class="well">
-    <button class="btn btn-primary" ng-click="characterSheetCtrl.saveCharacterSheet()">Save changes</button>
-    (All changes will be permanently saved, do not attempt to reload the page)
+<div flex-xs="" flex-gt-xs="100" layout="column">
+    <md-card md-theme-watch="">
+        <md-card-content>
+            <div ng-include="'../templates/'+characterSheetCtrl.template.squeletton+'/template.html'"></div>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-raised md-primary" ng-click="characterSheetCtrl.saveCharacterSheet()">Save</md-button>
+        </md-card-actions>
+    </md-card>
 </div>
-<div ng-include="'../templates/'+characterSheetCtrl.template.squeletton+'/template.html'"></div>

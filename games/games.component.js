@@ -1,7 +1,35 @@
-function GamesController(gamesFactory){
+function GamesController(gamesFactory, $mdDialog){
     console.log('Games controller');
 
     var vm = this;
+
+    vm.openForm = function(ev){
+        $mdDialog.show({
+            controller: DialogController,
+            templateUrl: 'dialog1.tmpl.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true,
+            fullscreen: vm.customFullscreen // Only for -xs, -sm breakpoints.
+        }).then(function(answer) {
+            vm.status = 'You said the information was "' + answer + '".';
+        }, function() {
+            vm.status = 'You cancelled the dialog.';
+        });
+    }
+    function DialogController($scope, $mdDialog) {
+        $scope.hide = function() {
+        $mdDialog.hide();
+        };
+
+        $scope.cancel = function() {
+        $mdDialog.cancel();
+        };
+
+        $scope.answer = function(answer) {
+        $mdDialog.hide(answer);
+        };
+    }
 
     vm.templates = [];
     gamesFactory.getTemplates().then(function(templates){
@@ -41,7 +69,7 @@ function GamesController(gamesFactory){
     }
 }
 
-GamesController.$inject = ['gamesFactory'];
+GamesController.$inject = ['gamesFactory', '$mdDialog'];
 
 angular.module('characterSheetmanager.gamesComponent', []).component('gamesComponent', {
     templateUrl: 'games/games.component.html',

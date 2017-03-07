@@ -1,3 +1,66 @@
+<div class='md-padding' layout="row" layout-wrap >
+    <div flex-gt-sm="25" layout="column" ng-repeat="game in gamesCtrl.games">
+        <md-card >
+            <img ng-src="{{game.image}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{game.title}}</span>
+                    <span class="md-subhead"><b>Template : </b>{{game.template.name}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-icon-button"><md-icon><i class="material-icons">delete</i></md-icon></md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>
+<md-button class="md-fab md-fab-bottom-right" aria-label="add" ng-click="gamesCtrl.openForm($event)">
+    <md-icon><i class="material-icons">add</i></md-icon>
+</md-button>
+
+<script type="text/ng-template" id="dialog1.tmpl.html">
+    <md-dialog aria-label="New game session" flex="50">
+        <form ng-cloak>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>New game</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="cancel()">
+                        <md-icon aria-label="Close dialog"><i class="material-icons">close</i></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-dialog-content>
+                <div class="md-dialog-content">
+                    <md-input-container>
+                        <label>Name : </label>
+                        <input ng-model="user.company">
+                    </md-input-container>
+                    <md-input-container>
+                        <label>Image : </label>
+                        <input ng-model="user.company">
+                    </md-input-container>
+
+                    <md-input-container class="md-block" flex-gt-xs="">
+                        <label>Template</label>
+                        <md-select ng-model="ctrl.userState">
+                            <md-option value="axe">Axe</md-option>
+                            <md-option value="sword">Sword</md-option>
+                            <md-option value="wand">Wand</md-option>
+                            <md-option value="pen">Pen</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+                <md-button class="md-raised" ng-click="cancel()">Cancel</md-button>
+                <md-button class="md-raised md-primary" ng-click="submit()">Create</md-button>
+            </md-dialog-actions>
+            </form>
+        </md-dialog>
+</script>
+<!--
 <div class = "page-header">
     <h1>Games</h1>
 </div>
@@ -54,3 +117,4 @@
         </div>
     </div>
 </div>
+-->
